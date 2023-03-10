@@ -1,49 +1,75 @@
 package bj.highfive;
 
 public class Person {
-    // Déclaration des membres
-    private String firstName;
-    private String lastName;
+
+    // Déclaration des variables
+    private String fname;
+    private String lname;
     private int age;
+    public static int foot = 2;
 
-    // Génération des getters et setters
-    public String getFirstName() {
-        return firstName;
+    public String getFname()
+    {
+        return this.fname;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-    
-    public String getLastName() {
-        return lastName;
+    public String getLname()
+    {
+        return this.lname;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public int getAge()
+    {
+        return this.age;
     }
 
-    public int getAge() {
-        return age;
+    public void setFname(String fn)
+    {
+        this.fname = fn;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setLname(String ln)
+    {
+        this.lname = ln;
     }
 
-    // Constructeur
-    public Person() {
+    public void setAge(int a)
+    {
+        this.age = a;
+    }
+
+    @Override
+    public String toString()
+    {
+        return "{"+this.getFname() +", "+ this.getLname() +", "+ this.getAge()+"}";
+    }
+
+    // Constructeurs
+    public Person()
+    {
         super();
+        System.out.println("Appel du constructor");
     }
 
-    public int presente(String text, int age)
+    public Person(String fn)
     {
-        return age;
-    }
-    public String presente(int a, String text)
-    {
-        return "";
+        this.fname = fn;
+        System.out.println("Appel du constructor");
     }
 
+    public Person(String fn, String ln)
+    {
+        this.fname = fn;
+        this.lname = ln;
+        System.out.println("Appel du constructor");
+    }
+
+    public Person(String fn, String ln, int a)
+    {
+        this.fname = fn;
+        this.lname = ln;
+        this.age = a;
+        System.out.println("Appel du constructor");
+    }
     
 }

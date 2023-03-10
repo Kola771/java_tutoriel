@@ -6,7 +6,13 @@ public class Person {
     private String fname;
     private String lname;
     private int age;
-    public static int foot = 2;
+    // public static int foot = 2;
+    public static int foot;
+
+    static {
+        System.out.println("Appel du bloc static");
+        foot = 2;
+    }
 
     public String getFname()
     {

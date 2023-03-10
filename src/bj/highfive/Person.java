@@ -9,6 +9,7 @@ public class Person {
     // public static int foot = 2;
     public static int foot;
 
+    // Bloc Static
     static {
         System.out.println("Appel du bloc static");
         foot = 2;

@@ -6,6 +6,8 @@ public class Person {
     private String fname;
     private String lname;
     private int age;
+    final private String profession = "Investisseur";
+    private Adress adresse;
     // public static int foot = 2;
     public static int foot;
 
@@ -51,6 +53,11 @@ public class Person {
         return "{"+this.getFname() +", "+ this.getLname() +", "+ this.getAge()+"}";
     }
 
+    // public double toString(double a)
+    // {
+    //     return a;
+    // }
+
     // Constructeurs
     public Person()
     {
@@ -77,6 +84,23 @@ public class Person {
         this.lname = ln;
         this.age = a;
         System.out.println("Appel du constructor");
+    }
+
+    public Person(String fname, String lname, int age, Adress adresse) {
+        this.fname = fname;
+        this.lname = lname;
+        this.age = age;
+        this.adresse = adresse;
+    }
+
+    // final public void present()
+    // {
+    //     System.out.println("Je suis " + this.fname + ", j\'ai " + this.age);
+    // }
+
+    public void present() {
+        System.out.println("Je me nomme " + this.getFname() + " " + this.getLname() + " et j'ai " + this.age + "ans.");
+        this.adresse.ShowAdress();
     }
     
 }

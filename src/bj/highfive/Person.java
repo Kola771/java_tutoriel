@@ -8,8 +8,23 @@ public class Person {
     private int age;
     final private String profession = "Investisseur";
     private Adress adresse;
+    public int fingers = 10;
     // public static int foot = 2;
+    private static int i;
     public static int foot;
+    
+    {
+        System.out.println("Hello");
+    }
+
+    {
+        System.out.println("Bloc 2");
+    }
+
+    static {
+        i = 2;
+        System.out.println("Static " + i);
+    }
 
     // Bloc Static
     static {
